@@ -30,18 +30,8 @@ public class DialogContent extends Parent{
 
     public WebElement getWebElement(String strElement) {
         switch (strElement){
-            case  "addButton": return this.addButton;
-            case  "saveButton": return this.saveButton;
-            case "nameInput" : return this.nameInput;
-            case "codeInput" : return this.codeInput;
-            case "integrationCode" : return this.integrationCode;
-            case "priorityCode" : return this.priorityCode;
-            case "toggleBar" : return this.toggleBar;
-            case "academicPeriod" : return this.academicPeriod;
-            case "academicPeriod1" : return this.academicPeriod1;
-            case "gradeLevel" : return this.gradeLevel;
-            case "gradeLevel2" : return this.radeLevel2;
-            case "searchAcademicPeriod": return this.searchAcademicPeriod;
+            case  "nameInput": return this.username;
+
 
         }
         return null;
@@ -49,8 +39,8 @@ public class DialogContent extends Parent{
 
  public void deleteItem(String searchText) {
 
-     mySendKeyes(searchInput, searchText);
-     myClick(searchButton); // fuse bar ı çocukları ortaya çıkıyor
+    // mySendKeyes(searchInput, searchText);
+    // myClick(searchButton); // fuse bar ı çocukları ortaya çıkıyor
 
      //beklet
      //1. StaleElemetn hatası verdi : erken buldum tez kaybettim
@@ -62,8 +52,8 @@ public class DialogContent extends Parent{
      // bu çocukların 0 olana bekle
      wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
 
-     myClick(deleteImageBtn);
-     myClick(deleteDialogBtn);
+    //myClick(deleteImageBtn);
+    //myClick(deleteDialogBtn);
 
      // silme ıslemı dıalogların ortak noktası olması sebebıyle buraya aldık.
      // Silme islemi yapacagımız her seferınde tekrar tekrar kod yazmayalım dırekt cagıralım dıye aldık.

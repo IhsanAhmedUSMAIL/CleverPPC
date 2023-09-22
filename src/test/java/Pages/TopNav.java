@@ -21,14 +21,7 @@ public class TopNav extends Parent{
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
             case "setup" : return this.setup; // return olduğu için break; gerek kalmıyor
-            case "parameters": return this.parameters;
-            case "countries" : return this.countries;
-            case "citizenship" : return this.citizenship;
-            case "nationalities" : return this.nationalities;
-            case "fees" : return this.fees;
-            case "entranceExamsOne": return this.entranceExamsOne;
-            case "setupTwo": return this.setupTwo;
-            case "entranceExamsTwo": return this.entranceExamsTwo;
+
         }
         return null;
     }
