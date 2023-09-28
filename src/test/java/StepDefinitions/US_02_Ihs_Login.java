@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.US_02_LoginContent_Ihs;
-import Utilities.GWD_Ihs;
+import Utilities.GWD;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,38 +14,37 @@ public class US_02_Ihs_Login {
 
     @Given("Navigate to cleverPPC")
     public void navigateToCleverPPC() {
-        GWD_Ihs.getDriver().get("https://cleverppc.com/prestashop4/");
+        GWD.getDriver().get("https://cleverppc.com/prestashop4/");
     }
 
     @When("Click sign-in button and enter {string} and {string} and click sign-in button")
     public void enterUsernameAndPasswordAndClickLoginButton(String email, String password) {
-        lc.signIn1.click();
-        lc.email.sendKeys(email);
-        lc.password.sendKeys(password);
-        lc.signIn2.click();
+
+       lc.myClick(lc.signIn1);
+        lc.mySendKeys(lc.email,email);
+        lc.mySendKeys(lc.password, password);
+        lc.myClick(lc.signIn2);
+
     }
 
     @Then("User should not be able to login")
     public void userShouldNotBeAbleToLogin() {
-        WebElement errorMessage = GWD_Ihs.getDriver().findElement(By.xpath("(//div[@class='alert alert-danger'])[1]"));
-
-        Assert.assertTrue(errorMessage.getText().contains("Authentication failed."));
+        lc.verifyContainsText(lc.hata, "Authentication failed.");
     }
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
-        Assert.assertTrue(GWD_Ihs.getDriver().getCurrentUrl().contains("my-account"));
+        lc.verifyContainsText(lc.welcomeMessage, "Welcome to your account");
+
     }
 
     @When("Click sign-in button and enter valid email and password and click sign-in button")
     public void clickSignInButtonAndEnterValidEmailAndPasswordAndClickSignInButton() {
 
-        lc.signIn1.click();
-        lc.email.sendKeys("t.ten.techno@gmail.com");
-        lc.password.sendKeys("TTtechno10");
-        lc.signIn2.click();
-
-
+        lc.myClick(lc.signIn1);
+        lc.mySendKeys(lc.email, "t.ten.techno@gmail.com");
+        lc.mySendKeys(lc.password, "TTtechno10");
+        lc.myClick(lc.signIn2);
 
     }
 }

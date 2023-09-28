@@ -1,14 +1,14 @@
 package Pages;
 
-import Utilities.GWD_Ihs;
+import Utilities.GWD;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US_08_Ihs_contactUsInfo {
+public class US_08_Ihs_content extends US_08_Ihs_Parent{
 
-    public US_08_Ihs_contactUsInfo() {
-        PageFactory.initElements(GWD_Ihs.getDriver(), this);
+    public US_08_Ihs_content() {
+        PageFactory.initElements(GWD.getDriver(), this);
 
     }
 
@@ -32,5 +32,9 @@ public class US_08_Ihs_contactUsInfo {
 
     @FindBy(xpath = "//button[@id='submitMessage' and @name='submitMessage']\n")
     public WebElement send;
+
+    @FindBy(xpath = "//p[@class='alert alert-success']")
+    public WebElement onay;
+
 
 }
