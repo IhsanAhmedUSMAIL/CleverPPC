@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.VildanContent;
+import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,14 +9,9 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class US_07_CHECKOUTSTEPDEFINITION {
+public class US_07_Checkout_Vildan {
 
-    VildanContent vc=new VildanContent();
-    @Given("Navigate to CleverPpc")
-    public void navigateToCleverPpc() {
-        GWD.getDriver().get("https://cleverppc.com/prestashop4/");
-
-    }
+    DialogContent vc=new DialogContent ();
 
     @And("Click sign in button")
     public void clickSignInButton() {
@@ -57,8 +52,8 @@ public class US_07_CHECKOUTSTEPDEFINITION {
 
     @Then("Selected address  should be displayed")
     public void selectedAddressShouldBeDisplayed() {
-       vc.scrollToElement(vc.address);
-        vc.verifyContainsText(vc.address,"YOUR");
+       vc.scrollToElement(vc.addressVild);
+       vc.verifyContainsText(vc.addressVild,"YOUR");
 
 
         vc.myClick(vc.proceedBtn);

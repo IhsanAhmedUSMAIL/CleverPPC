@@ -1,31 +1,43 @@
-Maven
-1- Yeni projeye tıklattım-> Proje Tipi olarak MAVEN
-   seçildi.satandart sonlandırıldı.
+CleverPPC Web Sitesi Team 10 Test Çalışması
 
-2- Klasör yapısını inceledik:
-   main -> Developer ın source kodları
-   test -> Testerın kodları
+Proje Amacı :
+https://cleverppc.com/prestashop4/ web sitesi için belirlenen 8 adet user story nin test edilmesi
+amaçlanmaktadır. Böylece sitenin kullanılabilirliğini ve stabil çalışıp çalışmadığını
+görebileceğiz
 
-   3- Mavenın verdiği düzenli yapının kendi tarafımızda ,
-      bizde kendi düzenli klasör yapımızı oluşturacağız.
-      Klasörler
+Proje Hedefleri:
+  US_01_Reg Kullanıcı Kaydı Oluşturma (Register)
+  US_02_Login Kullanıcı Girişi Yapabilme (Login)
+  US03_NewAddr Kullanıcı hesabına yeni bir adres eklemek
+  US04_AddToCart Sepete Ürün Ekleme
+  US05_ProductList Listelenen Ürünlerin Sayısının Kontrolü
+  US06_AddToCartList Sepete Eklenen Ürünlerin Kontrolü
+  US07_Checkout Sipariş Verme ve Ödeme
+  US08_ContactUs Kullanıcı olarak web sitesi ekibine mail gönderme
 
-      FeatureFiles   -> Senaryolarımızın olduğu klasör
-      StepDefinitions-> Senaryoların çalışan adımları - metodları burada olacak
-      Pages          -> Page Object Modell sayfalarımız POM (@FindBy)
-      Utilities      -> Driver ve diğer tekrar kullanılacak metodlarımız
-      Runners        -> Çalıştırıcılar
+Proje Teknoloji ve Araçları :
+Programming Language : Java JDK 1.8 se
+Test Automation Tool : cucumber:7.9.0-testng:7.9.0
+Version Control : Git & GitHub
+Project Management : Jira & XRay
 
-3- Ayarlar
-   A) Intellij Editör ayarları
-      2 tane Plugin ekleyeceğiz
-        1- Cucumber for Java
-        2- Gherkin Language  -> https://cucumber.io/docs/gherkin/reference/#keywords
+Kurulum  :
+GitHub'da merkez proje oluşturulup master branch koruma altına alındı.
+Tüm takım üyeleri İntellij üzerinden projeyi vcs ile klonlayıp kendi branchlarını oluşturdu.
+Jirada yeni proje oluşturulup product backlog oluşturuldu.
+Tüm test caseler intellij üzerinden çalıştırılıp testler tamamlandı.
+Projenin baştan sona kadar yönetimi için Jira ve Xray kullanılmıştır.
 
+Takım Üyeleri :
+QA Lead - İhsan Ahmed Usmail - ihsanahmedusmail@gmail.com
+QA - Vildan Çayhan - cayhanvildan@gmail.com
+QA - Cansu Çeker - cansu.ceker.te@gmail.com
+QA - Faruk Çeker - farukceker.te@gmail.com
+QA - Ethem Ağca - ethemagca0126@gmail.com
 
-   B) POM.xml -> Project Object Model Ayarları
+Sürüm :
+NC-1.01
 
-       Selenium
-       testNg
-       Cucumber
-       Cucumber-TestNg birleştiren lib
+Teşekkür :
+İsmet Temur, Mustafa Yılmaz, Ebuzer T. , Hakan Taşdelen, Bilal Mavus 'a
+katkılarından dolayı teşekkür ederiz.

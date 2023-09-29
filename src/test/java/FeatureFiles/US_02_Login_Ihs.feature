@@ -1,7 +1,7 @@
 Feature: Login functionality
 
   Scenario Outline: Login with invalid username and password
-    Given Navigate to cleverPPC
+     Given Navigate to CleverPPC
     When Click sign-in button and enter "<invalid_email>" and "<invalid_password>" and click sign-in button
     Then User should not be able to login
 
@@ -15,9 +15,10 @@ Feature: Login functionality
       | null_6@example.com | null_pass_6 |
 
   Scenario: Login with valid username and password
-    Given Navigate to cleverPPC
+    Given Navigate to CleverPPC
     When Click sign-in button and enter valid email and password and click sign-in button
-    Then User should login successfully
+    Then User should be able to login successfully
+
 
 
 

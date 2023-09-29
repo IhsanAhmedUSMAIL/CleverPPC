@@ -1,7 +1,7 @@
 Feature: Customer Service functionality
 
   Scenario: Contact customer service and share a payment receipt
-    Given Navigate to cleverPPC
+   Given Navigate to CleverPPC
     When The user click on the contact us button
     And select a subject heading
     And enters their email address

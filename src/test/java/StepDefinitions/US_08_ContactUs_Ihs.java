@@ -1,21 +1,19 @@
 package StepDefinitions;
 
-import Pages.US_08_Ihs_content;
+import Pages.DialogContent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class US_08_Ihs_contactUs  {
+public class US_08_ContactUs_Ihs {
 
-    US_08_Ihs_content cu = new US_08_Ihs_content();
+    DialogContent cu = new DialogContent();
 
     @When("The user click on the contact us button")
     public void theUserClickOnTheContactUsButton() {
         cu.myClick(cu.contactUs);
 
-
     }
-
 
     @And("select a subject heading")
     public void selectASubjectHeading() {
@@ -26,19 +24,19 @@ public class US_08_Ihs_contactUs  {
     @And("enters their email address")
     public void entersTheirEmailAddress() {
 
-        cu.mySendKeys(cu.email, "t.ten.techno@gmail.com");
+        cu.mySendKeyes(cu.email, "t.ten.techno@gmail.com");
 
     }
 
     @And("choose an order reference")
     public void chooseAnOrderReference() {
-        cu.mySendKeys(cu.orderReference, "DVJLYMYBQ");
+        cu.mySendKeyes(cu.orderReference, "DVJLYMYBQ");
 
     }
 
     @And("write down a message")
     public void writeDownAMessage() {
-        cu.mySendKeys(cu.message, "Banka havalesi henüz yapıldı, ödeme dekontu ektedir. Team Ten");
+        cu.mySendKeyes(cu.message, "Banka havalesi henüz yapıldı, ödeme dekontu ektedir. Team Ten");
 
     }
     @When("choose a file from the computer")

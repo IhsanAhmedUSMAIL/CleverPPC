@@ -1,20 +1,15 @@
 package StepDefinitions;
-import Pages.DialogContent_Cansu;
-import Pages.TopNav;
+import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class US_06_Cansu {
-    TopNav ln = new TopNav();
-    DialogContent_Cansu dc = new DialogContent_Cansu();
+public class US_06_AddToCartList_Cansu {
+    DialogContent dc = new DialogContent();
 
     @When("Choose the dresses")
     public void chooseTheDresses() {
@@ -41,6 +36,7 @@ public class US_06_Cansu {
     @Then("Confirm cart")
     public void confirmCart() {
               dc.myClick(dc.cartButton);
-        Assert.assertTrue(dc.cartContains.getText().contains("3"),"seçilen ürün 3 adetten farklıdır.");
+              dc.verifyContainsText(dc.cartContains,"2");
+        //Assert.assertTrue(dc.cartContains.getText().contains("3"),"seçilen ürün 3 adetten farklıdır.");
     }
 }

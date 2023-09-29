@@ -6,20 +6,19 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
 
 @CucumberOptions(
-        //birden fazla tag/grup adı verilebilir
-        tags = "@SmokeTest or @Regression", // and dersen sadece her iki etiketi olanı çalıştırır
+
         features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"},
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
-public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
+public class _Team10_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public static void writeExtentReport(){
-        ExtentService.getInstance().setSystemInfo("Windows User Name",System.getProperty("user.name")); // username : Ihsan Ahmed
+        ExtentService.getInstance().setSystemInfo("Windows User Name",System.getProperty("user.name"));
         ExtentService.getInstance().setSystemInfo("Time Zone", System.getProperty("user.timezone"));
-        ExtentService.getInstance().setSystemInfo("User Name", "Ihsan Ahmed");
-        ExtentService.getInstance().setSystemInfo("Application Name", "Campus");
+        ExtentService.getInstance().setSystemInfo("User Name", "Team 10");
+        ExtentService.getInstance().setSystemInfo("Application Name", "cleverPPC");
         ExtentService.getInstance().setSystemInfo("Operating System Info", System.getProperty("os.name"));
         ExtentService.getInstance().setSystemInfo("Department", "QA");
         ExtentService.getInstance().setSystemInfo("Ek Satır", "Açıklama");

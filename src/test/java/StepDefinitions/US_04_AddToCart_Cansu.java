@@ -1,24 +1,15 @@
 package StepDefinitions;
 
-import Pages.DialogContent_Cansu;
-import Pages.TopNav;
+import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class US_04_cansu {
-    TopNav ln = new TopNav();
-    DialogContent_Cansu dc = new DialogContent_Cansu();
+public class US_04_AddToCart_Cansu {
 
-    @Given("Navigate to CleverPPC")
-    public void navigateToCleverPPC() {
-        GWD.getDriver().get("https://cleverppc.com/prestashop4/");
-    }
+    DialogContent dc = new DialogContent();
 
     @When("Choose the dress")
     public void chooseTheDress() {

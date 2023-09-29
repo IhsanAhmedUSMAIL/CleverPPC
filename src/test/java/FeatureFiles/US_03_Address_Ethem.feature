@@ -1,18 +1,17 @@
 Feature: Adress functionality
 
-
   Scenario: Create Addresses
     Given Navigate to CleverPPC
     When Click the SiteMap
-    When Enter username and password and click login button
+    When User enters username and password and click login button
     And Click the Address
-    Then User should login successfully
+    Then User should be able to login positively
     When Click on the element in DialogContent
       | adanewaddress |
 
-    And User sending the keys in DialogContent
-      | firstNameInput | Eto |
-      | lastNameInput | etoa |
+    And User send the keys in DialogContent
+      | firstNameInputET | Eto |
+      | lastNameInputET | etoa |
       | address       | Techno|
       | city | Los Angeles |
       | zip | 12356 |
@@ -22,7 +21,7 @@ Feature: Adress functionality
 
    And select state
 
-    When Click on the element in DialogContent
+    When Clicks on the element in DialogContent
       | saveButton |
 
     Then Success message should be displayed

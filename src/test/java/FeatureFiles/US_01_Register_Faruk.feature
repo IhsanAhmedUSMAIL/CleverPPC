@@ -1,25 +1,24 @@
 Feature: Register Functionality
 
-  @Faruk
   Scenario: Register with user information
 
-    Given Navigate to CleverPPC
+     Given Navigate to CleverPPC
 
-    When Click on the element in DialogContent_Faruk
+    When Click on the element in DialogContent
       | signInButton |
 
-    And User sending the keys in DialogContent_Faruk
-      | emailCreateInput | cek7@gmail.com |
+    And User sending the keys in DialogContent
+      | emailCreateInput | cekk7@gmail.com |
 
-    When Click on the element in DialogContent_Faruk
+    When Click on the element in DialogContent
       | createAccountButton |
 
-    And User sending the keys in DialogContent_Faruk
+    And User sending the keys in DialogContent
       | firstNameInput | far |
       | lastNameInput | far |
       | passwordInput | far123 |
 
-    When Click on the element in DialogContent_Faruk
+    When Click on the element in DialogContent
       | registerButton |
 
-    Then Success message should be displayed
+    Then User should registered successfully
